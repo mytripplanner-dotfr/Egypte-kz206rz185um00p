@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Égypte : Sur les Traces des Pharaons </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée au Caire, Première Immersion</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Majesté des Pyramides et du Sphinx</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Trésors du Musée et Souk Vibrant</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Caire Copte et Islamique</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Voyage vers Assouan</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Merveilles d'Assouan</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Grandeur d'Abou Simbel</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Douceur du Nil et Culture Nubienne</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Cap sur Louxor, la Ville-Musée</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Temples de Karnak et Louxor</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Rive Ouest : Nécropole des Pharaons</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Vol en Montgolfière et Musée de Louxor</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Direction la Mer Rouge : Hurghada</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Journée Détente Balnéaire</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Exploration des Fonds Marins</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Aventure dans le Désert</a>
+            
+                <a href="#jour-17" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J17 Retour au Caire</a>
+            
+                <a href="#jour-18" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J18 Saqqarah et Dahchour : Berceaux des Pyramides</a>
+            
+                <a href="#jour-19" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J19 Derniers Instants au Caire</a>
+            
+                <a href="#jour-20" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J20 Départ du Caire</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">EGYPTE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Égypte : Sur les Traces des Pharaons</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 20 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 3300€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 7h depuis Gilles, France avec escale</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée au Caire, Première Immersion</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Bienvenue au Caire, la vibrante capitale égyptienne ! Après votre vol, prenez le temps de vous installer et de vous imprégner de l'atmosphère unique de cette mégalopole. Une balade tranquille le long du Nil ou dans les environs de votre hôtel sera parfaite pour une première approche en douceur.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée au Caire</strong> : Atterrissage à l'aéroport international du Caire et transfert vers votre hôtel. Profitez du trajet pour observer les premiers aperçus de la vie locale.</li><li>🛏️ <strong>Installation à l'hôtel</strong> : Prenez possession de votre chambre et rafraîchissez-vous après le voyage. Un moment de détente est essentiel avant de commencer l'exploration.</li><li>🚶‍♂️ <strong>Balade le long du Nil</strong> : Une promenade apaisante sur les rives du Nil offre une première immersion dans l'ambiance cairote. Admirez les felouques et les lumières de la ville au crépuscule.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil d'arrivée</p>
+                                <p class="text-gray-700">Prévoyez de changer un peu d'argent à l'aéroport pour les premières dépenses. Les taxis officiels sont reconnaissables et fiables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Majesté des Pyramides et du Sphinx</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez au cœur de l'histoire millénaire de l'Égypte avec la visite des emblématiques Pyramides de Gizeh et du Sphinx. Ces merveilles architecturales, témoins d'une civilisation grandiose, vous laisseront sans voix. Une journée inoubliable sous le signe de la majesté pharaonique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li> pyramids <strong>Exploration des Pyramides de Gizeh</strong> : Admirez la grandeur des pyramides de Khéops, Khéphren et Mykérinos, dernières merveilles du monde antique encore debout. Vous pouvez même choisir d'entrer dans l'une d'elles pour une expérience unique.</li><li> sphinx <strong>Rencontre avec le Sphinx</strong> : Contemplez l'énigmatique Sphinx, gardien millénaire du plateau de Gizeh. Sa silhouette imposante et son regard mystérieux fascinent depuis des siècles.</li><li>🐪 <strong>Balade à dos de chameau</strong> : Pour une perspective différente et des photos mémorables, optez pour une courte balade à dos de chameau autour du site. C'est une manière traditionnelle et amusante de découvrir les lieux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Meilleur spot photo</p>
+                                <p class="text-gray-700">Pour une vue panoramique des trois pyramides et du Sphinx, dirigez-vous vers le point de vue situé derrière la pyramide de Khéphren.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Trésors du Musée et Souk Vibrant</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, le Caire vous ouvre les portes de ses trésors archéologiques et de son souk vibrant. Du faste des pharaons au tumulte des marchands, cette journée est un voyage sensoriel et historique. Préparez-vous à être émerveillé par la richesse culturelle égyptienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏛️ <strong>Visite du Musée Égyptien</strong> : Explorez les collections inestimables du Musée Égyptien, abritant des milliers d'artefacts, dont le trésor funéraire de Toutânkhamon. Chaque salle est une fenêtre sur l'histoire des pharaons.</li><li>🛍️ <strong>Flânerie au Khan el-Khalili</strong> : Imprégnez-vous de l'ambiance du souk Khan el-Khalili, un marché historique où vous trouverez épices, bijoux, artisanat et souvenirs. N'hésitez pas à marchander pour vos achats.</li><li>☕ <strong>Pause au Café Fishawi</strong> : Détendez-vous au légendaire Café Fishawi, le plus ancien café du Caire, au cœur du souk. Savourez un thé à la menthe ou un café égyptien dans un cadre authentique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Astuce pour le souk</p>
+                                <p class="text-gray-700">Le marchandage est une tradition au Khan el-Khalili, considérez-le comme un jeu. Commencez par proposer environ la moitié du prix demandé.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Caire Copte et Islamique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez les facettes moins connues du Caire en explorant ses quartiers historiques. Du charme intemporel du Caire Copte aux splendeurs architecturales du Caire Islamique, cette journée vous révélera la diversité religieuse et culturelle de la ville. Un véritable voyage dans le temps.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛪ <strong>Exploration du Caire Copte</strong> : Visitez l'église suspendue (Sainte-Marie), la synagogue Ben Ezra et l'église Saint-Serge, où la Sainte Famille aurait trouvé refuge. Ce quartier paisible est un havre de spiritualité.</li><li>🕌 <strong>Découverte du Caire Islamique</strong> : Plongez dans l'histoire en visitant la Mosquée Ibn Touloun, l'une des plus anciennes et des plus grandes du Caire. Son architecture imposante et son minaret unique sont à couper le souffle.</li><li>🏰 <strong>Citadelle de Saladin et Mosquée d'Albâtre</strong> : Montez à la Citadelle de Saladin pour une vue panoramique sur le Caire et visitez la magnifique Mosquée de Mohamed Ali (Mosquée d'Albâtre). Son intérieur somptueux est un chef-d'œuvre de l'art ottoman.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👗 Code vestimentaire</p>
+                                <p class="text-gray-700">Lors de la visite des lieux de culte, prévoyez des vêtements couvrants (épaules et genoux) et un foulard pour les femmes dans les mosquées.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Voyage vers Assouan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Laissez derrière vous l'effervescence du Caire pour vous diriger vers le sud, vers la paisible ville d'Assouan. Ce voyage en train de nuit est une expérience en soi, offrant un aperçu du paysage égyptien qui défile. Préparez-vous à découvrir la beauté sereine de la Haute-Égypte.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚂 <strong>Voyage en train de nuit vers Assouan</strong> : Embarquez pour un train de nuit confortable depuis la gare de Ramsès au Caire. C'est une manière authentique et efficace de parcourir la distance tout en économisant une nuit d'hôtel.</li><li>🍽️ <strong>Dîner à bord du train</strong> : Profitez d'un dîner simple mais savoureux servi à bord du train. C'est l'occasion de se détendre et de se préparer pour les aventures du lendemain.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛌 Confort du train</p>
+                                <p class="text-gray-700">Les trains de nuit couchettes sont généralement climatisés et offrent des compartiments privés. Réservez vos billets à l'avance, surtout en haute saison.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Merveilles d'Assouan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Assouan, la perle du Nil, vous accueille avec sa douceur de vivre et ses sites antiques. Cette journée est dédiée à la découverte des merveilles d'ingénierie et d'art sacré qui jalonnent la région. Laissez-vous charmer par la beauté du temple de Philae et l'ingéniosité de l'Obélisque inachevé.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li> dam <strong>Visite du Haut Barrage d'Assouan</strong> : Découvrez cette prouesse d'ingénierie moderne qui a transformé l'Égypte en contrôlant les crues du Nil. Il offre une vue imprenable sur le Lac Nasser.</li><li> obelisk <strong>Exploration de l'Obélisque Inachevé</strong> : Admirez cet obélisque monumental encore ancré dans la roche, témoin des techniques de taille de pierre des anciens Égyptiens. Il offre un aperçu fascinant de leur savoir-faire.</li><li> temple <strong>Découverte du Temple de Philae</strong> : Naviguez vers l'île d'Agilkia pour visiter le magnifique Temple de Philae, dédié à la déesse Isis. Ce temple, sauvé des eaux, est un joyau de l'architecture ptolémaïque.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚤 Accès à Philae</p>
+                                <p class="text-gray-700">Le temple de Philae est accessible uniquement en bateau. N'hésitez pas à négocier le prix de la traversée avec les bateliers.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Grandeur d'Abou Simbel</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, une excursion mémorable vous attend vers les temples d'Abou Simbel, des chefs-d'œuvre taillés dans la roche. Leur déplacement spectaculaire pour les sauver des eaux du Lac Nasser est une histoire fascinante. Une journée d'émerveillement devant la grandeur pharaonique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li> temple <strong>Excursion aux Temples d'Abou Simbel</strong> : Partez tôt le matin pour une excursion inoubliable vers les temples de Ramsès II et Néfertari. Ces monuments colossaux, taillés dans la falaise, sont d'une beauté et d'une grandeur inégalées.</li><li> lake <strong>Vue sur le Lac Nasser</strong> : Profitez des paysages désertiques et de la vue sur le Lac Nasser pendant le trajet. Le lac lui-même est une merveille artificielle, fruit du Haut Barrage.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Départ matinal</p>
+                                <p class="text-gray-700">L'excursion à Abou Simbel nécessite un départ très tôt le matin (vers 3h-4h) pour éviter la chaleur et profiter pleinement du site avant l'affluence.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Douceur du Nil et Culture Nubienne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Imprégnez-vous de l'atmosphère sereine d'Assouan en naviguant sur le Nil et en explorant la culture nubienne. Cette journée est dédiée à la détente et à la découverte des traditions locales. Laissez-vous porter par les eaux du fleuve sacré et la gentillesse des habitants.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛵ <strong>Balade en felouque sur le Nil</strong> : Profitez d'une paisible balade en felouque, voilier traditionnel, sur le Nil. Laissez le vent vous guider et admirez les paysages verdoyants des rives.</li><li> village <strong>Visite d'un village nubien</strong> : Traversez le Nil pour découvrir un charmant village nubien. Explorez ses maisons colorées, rencontrez les habitants et apprenez-en davantage sur leur culture unique et leurs traditions.</li><li> spice <strong>Découverte du Souk d'Assouan</strong> : En fin de journée, flânez dans le souk d'Assouan, réputé pour ses épices, ses parfums et son artisanat nubien. C'est l'endroit idéal pour trouver des souvenirs authentiques.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Soutien local</p>
+                                <p class="text-gray-700">Acheter des produits artisanaux directement dans les villages nubiens contribue à soutenir l'économie locale et les artisans.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cap sur Louxor, la Ville-Musée</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittez la tranquillité d'Assouan pour rejoindre Louxor, la "plus grande ville-musée à ciel ouvert du monde". Le trajet en train offre des vues pittoresques sur la campagne égyptienne. Préparez-vous à être ébloui par les splendeurs de l'ancienne Thèbes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚂 <strong>Voyage en train vers Louxor</strong> : Prenez un train de day pour un trajet confortable le long du Nil jusqu'à Louxor. Admirez les paysages changeants et la vie rurale qui défile par la fenêtre.</li><li>🛏️ <strong>Installation à l'hôtel à Louxor</strong> : Arrivée à Louxor et installation dans votre hôtel. Profitez de l'après-midi pour vous détendre ou faire une première balade exploratoire dans les environs.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎟️ Billets de train</p>
+                                <p class="text-gray-700">Il est conseillé de réserver les billets de train à l'avance, surtout si vous voyagez en haute saison, pour garantir votre place.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Temples de Karnak et Louxor</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Louxor vous ouvre ses portes avec deux de ses temples les plus majestueux : Karnak et Louxor. Ces complexes monumentaux, dédiés aux dieux et aux pharaons, témoignent de la grandeur de l'Égypte antique. Une journée d'exploration qui vous transportera des milliers d'années en arrière.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li> temple <strong>Exploration du Temple de Karnak</strong> : Passez plusieurs heures à explorer l'immense complexe de Karnak, le plus grand site religieux jamais construit. Admirez la salle hypostyle, les obélisques et les statues colossales.</li><li> temple <strong>Visite du Temple de Louxor</strong> : En fin d'après-midi, visitez le Temple de Louxor, particulièrement magique au coucher du soleil lorsque ses colonnes s'illuminent. Il est dédié à la triade thébaine d'Amon, Mout et Khonsou.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Visite nocturne</p>
+                                <p class="text-gray-700">Le Temple de Louxor est souvent ouvert en soirée, offrant une atmosphère différente et des éclairages spectaculaires. Une expérience à ne pas manquer.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rive Ouest : Nécropole des Pharaons</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, traversez le Nil pour explorer la Rive Ouest de Louxor, la nécropole des pharaons. De la Vallée des Rois aux temples funéraires, cette journée est une plongée dans l'au-delà égyptien. Préparez-vous à découvrir des trésors cachés et des histoires fascinantes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li> tomb <strong>Découverte de la Vallée des Rois</strong> : Explorez les tombes des pharaons, richement décorées de hiéroglyphes et de peintures murales. Choisissez trois tombes à visiter, chacune racontant une histoire unique.</li><li> temple <strong>Visite du Temple d'Hatchepsout</strong> : Admirez le temple funéraire de la reine Hatchepsout, une structure unique et moderne pour son époque, taillée dans la falaise. Son architecture en terrasses est impressionnante.</li><li> statue <strong>Contemplation des Colosses de Memnon</strong> : Faites une halte devant les deux imposantes statues de pierre de Pharaon Amenhotep III, les Colosses de Memnon. Ces géants silencieux gardent l'entrée de l'ancienne nécropole.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">La Rive Ouest est très exposée au soleil. Prévoyez chapeau, lunettes de soleil et crème solaire, ainsi que de l'eau en abondance.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vol en Montgolfière et Musée de Louxor</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Commencez la journée par une expérience inoubliable au lever du soleil, puis plongez dans l'histoire locale. Louxor continue de révéler ses secrets, entre vues aériennes spectaculaires et trésors muséaux. Une journée pour apprécier la beauté et la richesse de cette ville antique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎈 <strong>Vol en montgolfière au lever du soleil</strong> : Offrez-vous un vol magique en montgolfière au-dessus de la Rive Ouest de Louxor. Admirez les temples et le Nil sous les premières lueurs du jour, une expérience à couper le souffle.</li><li>🏛️ <strong>Visite du Musée de Louxor</strong> : Explorez le Musée de Louxor, réputé pour sa collection d'artefacts bien présentés et son ambiance sereine. Il offre un complément parfait aux visites des temples.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Réservation montgolfière</p>
+                                <p class="text-gray-700">Réservez votre vol en montgolfière à l'avance auprès d'une compagnie réputée pour garantir votre place et votre sécurité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Direction la Mer Rouge : Hurghada</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'immersion dans l'histoire, changez de décor et dirigez-vous vers les rives de la Mer Rouge. Hurghada vous attend avec ses eaux turquoise et son ambiance balnéaire. Un trajet en bus confortable vous mènera vers cette destination de détente et d'activités nautiques.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚌 <strong>Voyage en bus vers Hurghada</strong> : Prenez un bus confortable depuis Louxor pour rejoindre Hurghada sur la côte de la Mer Rouge. Le trajet offre des paysages variés, du désert aux montagnes.</li><li>🏖️ <strong>Installation et détente à Hurghada</strong> : Arrivée à Hurghada et installation dans votre hôtel. Profitez de l'après-midi pour vous détendre au bord de la piscine ou sur la plage, et vous acclimater à l'ambiance balnéaire.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌊 Climat de la Mer Rouge</p>
+                                <p class="text-gray-700">Le climat à Hurghada est généralement chaud et ensoleillé toute l'année, idéal pour la baignade et les activités nautiques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée Détente Balnéaire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée de pure détente et de plaisir balnéaire à Hurghada. Que vous préfériez vous prélasser au soleil, nager dans les eaux cristallines ou explorer les fonds marins, la Mer Rouge offre un cadre idyllique. Laissez-vous bercer par la douceur de vivre de la côte.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏊‍♀️ <strong>Baignade et farniente à la plage</strong> : Passez la journée à vous détendre sur l'une des belles plages d'Hurghada. Profitez du soleil, nagez dans les eaux chaudes de la Mer Rouge et rechargez vos batteries.</li><li>🍹 <strong>Dégustation de fruits de mer frais</strong> : En soirée, savourez un délicieux dîner de fruits de mer frais dans l'un des nombreux restaurants du port. La pêche locale est excellente et variée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧴 Protection solaire</p>
+                                <p class="text-gray-700">Le soleil est intense à Hurghada. N'oubliez pas une protection solaire élevée, un chapeau et des lunettes de soleil, même à l'ombre.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Exploration des Fonds Marins</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, la Mer Rouge vous invite à explorer ses trésors sous-marins. Que vous soyez adepte de snorkeling ou de plongée, les récifs coralliens d'Hurghada sont parmi les plus beaux du monde. Une journée d'aventure aquatique qui vous laissera des souvenirs inoubliables.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🐠 <strong>Excursion snorkeling ou plongée</strong> : Embarquez pour une excursion en bateau vers des sites de snorkeling ou de plongée réputés. Nagez au milieu de poissons colorés et admirez les magnifiques coraux de la Mer Rouge.</li><li>🏝️ <strong>Détente sur une île paradisiaque</strong> : Certaines excursions incluent une escale sur une île déserte pour un déjeuner barbecue et un moment de détente. Profitez du sable blanc et des eaux turquoise.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤿 Équipement</p>
+                                <p class="text-gray-700">La plupart des excursions fournissent l'équipement de snorkeling ou de plongée, mais vous pouvez apporter le vôtre si vous préférez.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure dans le Désert</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après les plaisirs de la mer, aventurez-vous dans le désert environnant pour une expérience différente. Un safari en quad ou en buggy vous fera découvrir les paysages lunaires du désert égyptien. Une journée d'adrénaline et de découverte des traditions bédouines.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏜️ <strong>Safari en quad ou en buggy dans le désert</strong> : Partez pour une aventure palpitante en quad ou en buggy à travers les dunes du désert. Ressentez l'adrénaline et admirez les paysages désertiques.</li><li>⛺ <strong>Visite d'un village bédouin</strong> : Rencontrez les Bédouins, partagez un thé traditionnel et découvrez leur mode de vie ancestral. C'est une immersion culturelle authentique au cœur du désert.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧣 Protection contre le sable</p>
+                                <p class="text-gray-700">Prévoyez un foulard (keffieh) pour vous protéger du sable et du soleil lors du safari dans le désert. Des lunettes de soleil sont également indispensables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-17" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 17</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour au Caire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Il est temps de quitter les plages d'Hurghada pour retourner au Caire. Un vol intérieur rapide vous permettra de gagner du temps et de profiter d'une dernière soirée dans la capitale. Préparez-vous à retrouver l'effervescence cairote pour les derniers jours de votre voyage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>✈️ <strong>Vol intérieur Hurghada - Le Caire</strong> : Prenez un vol court et confortable depuis l'aéroport d'Hurghada vers Le Caire. C'est le moyen le plus rapide de revenir dans la capitale.</li><li>🌃 <strong>Dîner et soirée au Caire</strong> : Profitez de votre dernière soirée au Caire pour un dîner dans un restaurant local ou une balade nocturne. Revivez les souvenirs de votre voyage.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour17.jpg" class="w-full h-64 object-cover" alt="Jour 17">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧳 Bagages</p>
+                                <p class="text-gray-700">Vérifiez les restrictions de bagages pour votre vol intérieur, elles peuvent être différentes de celles de votre vol international.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-18" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 18</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Saqqarah et Dahchour : Berceaux des Pyramides</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour cette avant-dernière journée au Caire, explorez des sites moins fréquentés mais tout aussi fascinants. Saqqarah et Dahchour offrent un aperçu unique de l'évolution des pyramides. Une journée pour approfondir vos connaissances de l'architecture funéraire égyptienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li> pyramid <strong>Visite de la Pyramide à Degrés de Saqqarah</strong> : Découvrez la plus ancienne structure en pierre du monde, la Pyramide à Degrés de Djoser, et son complexe funéraire. C'est un jalon majeur de l'architecture égyptienne.</li><li> pyramid <strong>Exploration des pyramides de Dahchour</strong> : Admirez la Pyramide Rhomboïdale et la Pyramide Rouge de Dahchour, témoins des premières tentatives de construction de pyramides à faces lisses. Elles offrent un contraste intéressant avec Gizeh.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour18.jpg" class="w-full h-64 object-cover" alt="Jour 18">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Chaussures confortables</p>
+                                <p class="text-gray-700">Les sites de Saqqarah et Dahchour impliquent de la marche sur des terrains inégaux. Prévoyez des chaussures confortables et fermées.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-19" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 19</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers Instants au Caire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée complète au Caire pour revisiter un lieu coup de cœur, faire vos derniers achats ou simplement vous imprégner de l'ambiance de la ville. Une journée flexible pour savourer les derniers instants de votre aventure égyptienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Derniers achats et souvenirs</strong> : Retournez au Khan el-Khalili ou explorez d'autres marchés pour trouver les derniers souvenirs et cadeaux. N'oubliez pas de marchander !</li><li>🚶‍♂️ <strong>Balade libre et découverte</strong> : Flânez dans les quartiers que vous avez appréciés, découvrez de nouvelles rues ou asseyez-vous dans un café pour observer la vie cairote. Laissez-vous porter par l'instant.</li><li>🍽️ <strong>Dîner d'adieu</strong> : Offrez-vous un dîner spécial dans un restaurant avec vue sur le Nil ou un établissement proposant de la cuisine égyptienne raffinée. Célébrez la fin de votre voyage.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour19.jpg" class="w-full h-64 object-cover" alt="Jour 19">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Spécialités locales</p>
+                                <p class="text-gray-700">Pensez aux épices, aux bijoux en argent, aux papyrus (vérifiez l'authenticité), aux cotons égyptiens ou aux objets en cuivre comme souvenirs.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-20" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 20</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ du Caire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de dire au revoir à l'Égypte, riche de souvenirs inoubliables et d'expériences fascinantes. Après un dernier petit-déjeuner, vous serez transféré à l'aéroport pour votre vol retour. Emportez avec vous la magie des pharaons et la chaleur de l'accueil égyptien.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍳 <strong>Dernier petit-déjeuner égyptien</strong> : Savourez un dernier petit-déjeuner typique avant votre départ. Goûtez au foul medames ou au ta'ameya (falafel égyptien).</li><li>✈️ <strong>Transfert à l'aéroport et départ</strong> : Transfert vers l'aéroport international du Caire pour votre vol retour vers Gilles, France. Le cœur rempli de souvenirs précieux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Egypte-kz206rz185um00p/main/jour20.jpg" class="w-full h-64 object-cover" alt="Jour 20">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛬 Confirmation de vol</p>
+                                <p class="text-gray-700">Vérifiez l'heure de votre vol et les détails de votre transfert la veille pour éviter tout stress le jour du départ.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>500€/pers (vol A/R Gilles, France - Le Caire avec escale en classe économique)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>350€/pers (trains de nuit, vols intérieurs, taxis, bus locaux)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>600€/pers (environ 30€/jour pour repas variés dans des restaurants locaux et intermédiaires)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>1300€/pers (20 nuits en hôtels 3 étoiles, environ 65€/nuit)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>450€/pers (entrées des sites, excursions, vol montgolfière)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois d'octobre à avril.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👥 L'Égypte est le pays le plus peuplé du monde arabe, avec une population d'environ 109 millions d'habitants, majoritairement concentrée le long du Nil.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🌍 L'Égypte est un pays transcontinental, situé à la jonction de l'Afrique du Nord-Est et du Moyen-Orient. Sa civilisation est l'une des plus anciennes et des plus influentes du monde.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗓️ Le calendrier égyptien antique était l'un des premiers à compter 365 jours, divisés en 12 mois de 30 jours, plus 5 jours "épagomènes".</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💧 Le Nil, fleuve sacré, est le plus long fleuve du monde et la source de vie de l'Égypte. Sans lui, la civilisation égyptienne n'aurait jamais pu prospérer.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Egypte-kz206rz185um00p/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://egypt.travel/fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Tourisme Égypte</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/eg/egypt-weather" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Égypte</strong></a></li>
+                    
+                        <li><a href="https://enr.gov.eg/en/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚆 Egyptian National Railways</strong></a></li>
+                    
+                        <li><a href="https://www.egyptair.com/fr/Pages/default.aspx" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>✈️ EgyptAir</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
