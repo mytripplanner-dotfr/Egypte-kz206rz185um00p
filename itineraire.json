@@ -1,0 +1,476 @@
+{
+  "pays": "Égypte",
+  "drapeau": "🇪🇬",
+  "symbole": "🐪",
+  "titre": "Égypte : Sur les Traces des Pharaons",
+  "budget_total": "3300€",
+  "duree": "20 jours",
+  "temps_vol": "7h depuis Gilles, France avec escale",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée au Caire, Première Immersion",
+      "legende": "Bienvenue au Caire, la vibrante capitale égyptienne ! Après votre vol, prenez le temps de vous installer et de vous imprégner de l'atmosphère unique de cette mégalopole. Une balade tranquille le long du Nil ou dans les environs de votre hôtel sera parfaite pour une première approche en douceur.",
+      "lieu": "Le Caire",
+      "activites": [
+        "🛬 <strong>Arrivée au Caire</strong> : Atterrissage à l'aéroport international du Caire et transfert vers votre hôtel. Profitez du trajet pour observer les premiers aperçus de la vie locale.",
+        "🛏️ <strong>Installation à l'hôtel</strong> : Prenez possession de votre chambre et rafraîchissez-vous après le voyage. Un moment de détente est essentiel avant de commencer l'exploration.",
+        "🚶‍♂️ <strong>Balade le long du Nil</strong> : Une promenade apaisante sur les rives du Nil offre une première immersion dans l'ambiance cairote. Admirez les felouques et les lumières de la ville au crépuscule."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil d'arrivée",
+          "texte": "Prévoyez de changer un peu d'argent à l'aéroport pour les premières dépenses. Les taxis officiels sont reconnaissables et fiables."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": " pyramids",
+      "titre": "Majesté des Pyramides et du Sphinx",
+      "legende": "Plongez au cœur de l'histoire millénaire de l'Égypte avec la visite des emblématiques Pyramides de Gizeh et du Sphinx. Ces merveilles architecturales, témoins d'une civilisation grandiose, vous laisseront sans voix. Une journée inoubliable sous le signe de la majesté pharaonique.",
+      "lieu": "Gizeh (près du Caire)",
+      "activites": [
+        " pyramids <strong>Exploration des Pyramides de Gizeh</strong> : Admirez la grandeur des pyramides de Khéops, Khéphren et Mykérinos, dernières merveilles du monde antique encore debout. Vous pouvez même choisir d'entrer dans l'une d'elles pour une expérience unique.",
+        " sphinx <strong>Rencontre avec le Sphinx</strong> : Contemplez l'énigmatique Sphinx, gardien millénaire du plateau de Gizeh. Sa silhouette imposante et son regard mystérieux fascinent depuis des siècles.",
+        "🐪 <strong>Balade à dos de chameau</strong> : Pour une perspective différente et des photos mémorables, optez pour une courte balade à dos de chameau autour du site. C'est une manière traditionnelle et amusante de découvrir les lieux."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Meilleur spot photo",
+          "texte": "Pour une vue panoramique des trois pyramides et du Sphinx, dirigez-vous vers le point de vue situé derrière la pyramide de Khéphren."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏛️",
+      "titre": "Trésors du Musée et Souk Vibrant",
+      "legende": "Aujourd'hui, le Caire vous ouvre les portes de ses trésors archéologiques et de son souk vibrant. Du faste des pharaons au tumulte des marchands, cette journée est un voyage sensoriel et historique. Préparez-vous à être émerveillé par la richesse culturelle égyptienne.",
+      "lieu": "Le Caire",
+      "activites": [
+        "🏛️ <strong>Visite du Musée Égyptien</strong> : Explorez les collections inestimables du Musée Égyptien, abritant des milliers d'artefacts, dont le trésor funéraire de Toutânkhamon. Chaque salle est une fenêtre sur l'histoire des pharaons.",
+        "🛍️ <strong>Flânerie au Khan el-Khalili</strong> : Imprégnez-vous de l'ambiance du souk Khan el-Khalili, un marché historique où vous trouverez épices, bijoux, artisanat et souvenirs. N'hésitez pas à marchander pour vos achats.",
+        "☕ <strong>Pause au Café Fishawi</strong> : Détendez-vous au légendaire Café Fishawi, le plus ancien café du Caire, au cœur du souk. Savourez un thé à la menthe ou un café égyptien dans un cadre authentique."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Astuce pour le souk",
+          "texte": "Le marchandage est une tradition au Khan el-Khalili, considérez-le comme un jeu. Commencez par proposer environ la moitié du prix demandé."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🕌",
+      "titre": "Caire Copte et Islamique",
+      "legende": "Découvrez les facettes moins connues du Caire en explorant ses quartiers historiques. Du charme intemporel du Caire Copte aux splendeurs architecturales du Caire Islamique, cette journée vous révélera la diversité religieuse et culturelle de la ville. Un véritable voyage dans le temps.",
+      "lieu": "Le Caire",
+      "activites": [
+        "⛪ <strong>Exploration du Caire Copte</strong> : Visitez l'église suspendue (Sainte-Marie), la synagogue Ben Ezra et l'église Saint-Serge, où la Sainte Famille aurait trouvé refuge. Ce quartier paisible est un havre de spiritualité.",
+        "🕌 <strong>Découverte du Caire Islamique</strong> : Plongez dans l'histoire en visitant la Mosquée Ibn Touloun, l'une des plus anciennes et des plus grandes du Caire. Son architecture imposante et son minaret unique sont à couper le souffle.",
+        "🏰 <strong>Citadelle de Saladin et Mosquée d'Albâtre</strong> : Montez à la Citadelle de Saladin pour une vue panoramique sur le Caire et visitez la magnifique Mosquée de Mohamed Ali (Mosquée d'Albâtre). Son intérieur somptueux est un chef-d'œuvre de l'art ottoman."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "👗",
+          "titre": "Code vestimentaire",
+          "texte": "Lors de la visite des lieux de culte, prévoyez des vêtements couvrants (épaules et genoux) et un foulard pour les femmes dans les mosquées."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🚂",
+      "titre": "Voyage vers Assouan",
+      "legende": "Laissez derrière vous l'effervescence du Caire pour vous diriger vers le sud, vers la paisible ville d'Assouan. Ce voyage en train de nuit est une expérience en soi, offrant un aperçu du paysage égyptien qui défile. Préparez-vous à découvrir la beauté sereine de la Haute-Égypte.",
+      "lieu": "Le Caire / Assouan",
+      "activites": [
+        "🚂 <strong>Voyage en train de nuit vers Assouan</strong> : Embarquez pour un train de nuit confortable depuis la gare de Ramsès au Caire. C'est une manière authentique et efficace de parcourir la distance tout en économisant une nuit d'hôtel.",
+        "🍽️ <strong>Dîner à bord du train</strong> : Profitez d'un dîner simple mais savoureux servi à bord du train. C'est l'occasion de se détendre et de se préparer pour les aventures du lendemain."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🛌",
+          "titre": "Confort du train",
+          "texte": "Les trains de nuit couchettes sont généralement climatisés et offrent des compartiments privés. Réservez vos billets à l'avance, surtout en haute saison."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": " dam",
+      "titre": "Merveilles d'Assouan",
+      "legende": "Assouan, la perle du Nil, vous accueille avec sa douceur de vivre et ses sites antiques. Cette journée est dédiée à la découverte des merveilles d'ingénierie et d'art sacré qui jalonnent la région. Laissez-vous charmer par la beauté du temple de Philae et l'ingéniosité de l'Obélisque inachevé.",
+      "lieu": "Assouan",
+      "activites": [
+        " dam <strong>Visite du Haut Barrage d'Assouan</strong> : Découvrez cette prouesse d'ingénierie moderne qui a transformé l'Égypte en contrôlant les crues du Nil. Il offre une vue imprenable sur le Lac Nasser.",
+        " obelisk <strong>Exploration de l'Obélisque Inachevé</strong> : Admirez cet obélisque monumental encore ancré dans la roche, témoin des techniques de taille de pierre des anciens Égyptiens. Il offre un aperçu fascinant de leur savoir-faire.",
+        " temple <strong>Découverte du Temple de Philae</strong> : Naviguez vers l'île d'Agilkia pour visiter le magnifique Temple de Philae, dédié à la déesse Isis. Ce temple, sauvé des eaux, est un joyau de l'architecture ptolémaïque."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🚤",
+          "titre": "Accès à Philae",
+          "texte": "Le temple de Philae est accessible uniquement en bateau. N'hésitez pas à négocier le prix de la traversée avec les bateliers."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": " temple",
+      "titre": "Grandeur d'Abou Simbel",
+      "legende": "Aujourd'hui, une excursion mémorable vous attend vers les temples d'Abou Simbel, des chefs-d'œuvre taillés dans la roche. Leur déplacement spectaculaire pour les sauver des eaux du Lac Nasser est une histoire fascinante. Une journée d'émerveillement devant la grandeur pharaonique.",
+      "lieu": "Abou Simbel (depuis Assouan)",
+      "activites": [
+        " temple <strong>Excursion aux Temples d'Abou Simbel</strong> : Partez tôt le matin pour une excursion inoubliable vers les temples de Ramsès II et Néfertari. Ces monuments colossaux, taillés dans la falaise, sont d'une beauté et d'une grandeur inégalées.",
+        " lake <strong>Vue sur le Lac Nasser</strong> : Profitez des paysages désertiques et de la vue sur le Lac Nasser pendant le trajet. Le lac lui-même est une merveille artificielle, fruit du Haut Barrage."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Départ matinal",
+          "texte": "L'excursion à Abou Simbel nécessite un départ très tôt le matin (vers 3h-4h) pour éviter la chaleur et profiter pleinement du site avant l'affluence."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "⛵",
+      "titre": "Douceur du Nil et Culture Nubienne",
+      "legende": "Imprégnez-vous de l'atmosphère sereine d'Assouan en naviguant sur le Nil et en explorant la culture nubienne. Cette journée est dédiée à la détente et à la découverte des traditions locales. Laissez-vous porter par les eaux du fleuve sacré et la gentillesse des habitants.",
+      "lieu": "Assouan",
+      "activites": [
+        "⛵ <strong>Balade en felouque sur le Nil</strong> : Profitez d'une paisible balade en felouque, voilier traditionnel, sur le Nil. Laissez le vent vous guider et admirez les paysages verdoyants des rives.",
+        " village <strong>Visite d'un village nubien</strong> : Traversez le Nil pour découvrir un charmant village nubien. Explorez ses maisons colorées, rencontrez les habitants et apprenez-en davantage sur leur culture unique et leurs traditions.",
+        " spice <strong>Découverte du Souk d'Assouan</strong> : En fin de journée, flânez dans le souk d'Assouan, réputé pour ses épices, ses parfums et son artisanat nubien. C'est l'endroit idéal pour trouver des souvenirs authentiques."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "💰",
+          "titre": "Soutien local",
+          "texte": "Acheter des produits artisanaux directement dans les villages nubiens contribue à soutenir l'économie locale et les artisans."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🚂",
+      "titre": "Cap sur Louxor, la Ville-Musée",
+      "legende": "Quittez la tranquillité d'Assouan pour rejoindre Louxor, la \"plus grande ville-musée à ciel ouvert du monde\". Le trajet en train offre des vues pittoresques sur la campagne égyptienne. Préparez-vous à être ébloui par les splendeurs de l'ancienne Thèbes.",
+      "lieu": "Assouan / Louxor",
+      "activites": [
+        "🚂 <strong>Voyage en train vers Louxor</strong> : Prenez un train de day pour un trajet confortable le long du Nil jusqu'à Louxor. Admirez les paysages changeants et la vie rurale qui défile par la fenêtre.",
+        "🛏️ <strong>Installation à l'hôtel à Louxor</strong> : Arrivée à Louxor et installation dans votre hôtel. Profitez de l'après-midi pour vous détendre ou faire une première balade exploratoire dans les environs."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🎟️",
+          "titre": "Billets de train",
+          "texte": "Il est conseillé de réserver les billets de train à l'avance, surtout si vous voyagez en haute saison, pour garantir votre place."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": " temple",
+      "titre": "Temples de Karnak et Louxor",
+      "legende": "Louxor vous ouvre ses portes avec deux de ses temples les plus majestueux : Karnak et Louxor. Ces complexes monumentaux, dédiés aux dieux et aux pharaons, témoignent de la grandeur de l'Égypte antique. Une journée d'exploration qui vous transportera des milliers d'années en arrière.",
+      "lieu": "Louxor",
+      "activites": [
+        " temple <strong>Exploration du Temple de Karnak</strong> : Passez plusieurs heures à explorer l'immense complexe de Karnak, le plus grand site religieux jamais construit. Admirez la salle hypostyle, les obélisques et les statues colossales.",
+        " temple <strong>Visite du Temple de Louxor</strong> : En fin d'après-midi, visitez le Temple de Louxor, particulièrement magique au coucher du soleil lorsque ses colonnes s'illuminent. Il est dédié à la triade thébaine d'Amon, Mout et Khonsou."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Visite nocturne",
+          "texte": "Le Temple de Louxor est souvent ouvert en soirée, offrant une atmosphère différente et des éclairages spectaculaires. Une expérience à ne pas manquer."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": " tomb",
+      "titre": "Rive Ouest : Nécropole des Pharaons",
+      "legende": "Aujourd'hui, traversez le Nil pour explorer la Rive Ouest de Louxor, la nécropole des pharaons. De la Vallée des Rois aux temples funéraires, cette journée est une plongée dans l'au-delà égyptien. Préparez-vous à découvrir des trésors cachés et des histoires fascinantes.",
+      "lieu": "Louxor (Rive Ouest)",
+      "activites": [
+        " tomb <strong>Découverte de la Vallée des Rois</strong> : Explorez les tombes des pharaons, richement décorées de hiéroglyphes et de peintures murales. Choisissez trois tombes à visiter, chacune racontant une histoire unique.",
+        " temple <strong>Visite du Temple d'Hatchepsout</strong> : Admirez le temple funéraire de la reine Hatchepsout, une structure unique et moderne pour son époque, taillée dans la falaise. Son architecture en terrasses est impressionnante.",
+        " statue <strong>Contemplation des Colosses de Memnon</strong> : Faites une halte devant les deux imposantes statues de pierre de Pharaon Amenhotep III, les Colosses de Memnon. Ces géants silencieux gardent l'entrée de l'ancienne nécropole."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "La Rive Ouest est très exposée au soleil. Prévoyez chapeau, lunettes de soleil et crème solaire, ainsi que de l'eau en abondance."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🎈",
+      "titre": "Vol en Montgolfière et Musée de Louxor",
+      "legende": "Commencez la journée par une expérience inoubliable au lever du soleil, puis plongez dans l'histoire locale. Louxor continue de révéler ses secrets, entre vues aériennes spectaculaires et trésors muséaux. Une journée pour apprécier la beauté et la richesse de cette ville antique.",
+      "lieu": "Louxor",
+      "activites": [
+        "🎈 <strong>Vol en montgolfière au lever du soleil</strong> : Offrez-vous un vol magique en montgolfière au-dessus de la Rive Ouest de Louxor. Admirez les temples et le Nil sous les premières lueurs du jour, une expérience à couper le souffle.",
+        "🏛️ <strong>Visite du Musée de Louxor</strong> : Explorez le Musée de Louxor, réputé pour sa collection d'artefacts bien présentés et son ambiance sereine. Il offre un complément parfait aux visites des temples."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "💰",
+          "titre": "Réservation montgolfière",
+          "texte": "Réservez votre vol en montgolfière à l'avance auprès d'une compagnie réputée pour garantir votre place et votre sécurité."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🚌",
+      "titre": "Direction la Mer Rouge : Hurghada",
+      "legende": "Après l'immersion dans l'histoire, changez de décor et dirigez-vous vers les rives de la Mer Rouge. Hurghada vous attend avec ses eaux turquoise et son ambiance balnéaire. Un trajet en bus confortable vous mènera vers cette destination de détente et d'activités nautiques.",
+      "lieu": "Louxor / Hurghada",
+      "activites": [
+        "🚌 <strong>Voyage en bus vers Hurghada</strong> : Prenez un bus confortable depuis Louxor pour rejoindre Hurghada sur la côte de la Mer Rouge. Le trajet offre des paysages variés, du désert aux montagnes.",
+        "🏖️ <strong>Installation et détente à Hurghada</strong> : Arrivée à Hurghada et installation dans votre hôtel. Profitez de l'après-midi pour vous détendre au bord de la piscine ou sur la plage, et vous acclimater à l'ambiance balnéaire."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "🌊",
+          "titre": "Climat de la Mer Rouge",
+          "texte": "Le climat à Hurghada est généralement chaud et ensoleillé toute l'année, idéal pour la baignade et les activités nautiques."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🏊‍♀️",
+      "titre": "Journée Détente Balnéaire",
+      "legende": "Profitez d'une journée de pure détente et de plaisir balnéaire à Hurghada. Que vous préfériez vous prélasser au soleil, nager dans les eaux cristallines ou explorer les fonds marins, la Mer Rouge offre un cadre idyllique. Laissez-vous bercer par la douceur de vivre de la côte.",
+      "lieu": "Hurghada",
+      "activites": [
+        "🏊‍♀️ <strong>Baignade et farniente à la plage</strong> : Passez la journée à vous détendre sur l'une des belles plages d'Hurghada. Profitez du soleil, nagez dans les eaux chaudes de la Mer Rouge et rechargez vos batteries.",
+        "🍹 <strong>Dégustation de fruits de mer frais</strong> : En soirée, savourez un délicieux dîner de fruits de mer frais dans l'un des nombreux restaurants du port. La pêche locale est excellente et variée."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "🧴",
+          "titre": "Protection solaire",
+          "texte": "Le soleil est intense à Hurghada. N'oubliez pas une protection solaire élevée, un chapeau et des lunettes de soleil, même à l'ombre."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🐠",
+      "titre": "Exploration des Fonds Marins",
+      "legende": "Aujourd'hui, la Mer Rouge vous invite à explorer ses trésors sous-marins. Que vous soyez adepte de snorkeling ou de plongée, les récifs coralliens d'Hurghada sont parmi les plus beaux du monde. Une journée d'aventure aquatique qui vous laissera des souvenirs inoubliables.",
+      "lieu": "Hurghada",
+      "activites": [
+        "🐠 <strong>Excursion snorkeling ou plongée</strong> : Embarquez pour une excursion en bateau vers des sites de snorkeling ou de plongée réputés. Nagez au milieu de poissons colorés et admirez les magnifiques coraux de la Mer Rouge.",
+        "🏝️ <strong>Détente sur une île paradisiaque</strong> : Certaines excursions incluent une escale sur une île déserte pour un déjeuner barbecue et un moment de détente. Profitez du sable blanc et des eaux turquoise."
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": "🤿",
+          "titre": "Équipement",
+          "texte": "La plupart des excursions fournissent l'équipement de snorkeling ou de plongée, mais vous pouvez apporter le vôtre si vous préférez."
+        }
+      ]
+    },
+    {
+      "jour": 16,
+      "symbole": "🏜️",
+      "titre": "Aventure dans le Désert",
+      "legende": "Après les plaisirs de la mer, aventurez-vous dans le désert environnant pour une expérience différente. Un safari en quad ou en buggy vous fera découvrir les paysages lunaires du désert égyptien. Une journée d'adrénaline et de découverte des traditions bédouines.",
+      "lieu": "Hurghada",
+      "activites": [
+        "🏜️ <strong>Safari en quad ou en buggy dans le désert</strong> : Partez pour une aventure palpitante en quad ou en buggy à travers les dunes du désert. Ressentez l'adrénaline et admirez les paysages désertiques.",
+        "⛺ <strong>Visite d'un village bédouin</strong> : Rencontrez les Bédouins, partagez un thé traditionnel et découvrez leur mode de vie ancestral. C'est une immersion culturelle authentique au cœur du désert."
+      ],
+      "illustration": "jour16.jpg",
+      "encarts": [
+        {
+          "symbole": "🧣",
+          "titre": "Protection contre le sable",
+          "texte": "Prévoyez un foulard (keffieh) pour vous protéger du sable et du soleil lors du safari dans le désert. Des lunettes de soleil sont également indispensables."
+        }
+      ]
+    },
+    {
+      "jour": 17,
+      "symbole": "✈️",
+      "titre": "Retour au Caire",
+      "legende": "Il est temps de quitter les plages d'Hurghada pour retourner au Caire. Un vol intérieur rapide vous permettra de gagner du temps et de profiter d'une dernière soirée dans la capitale. Préparez-vous à retrouver l'effervescence cairote pour les derniers jours de votre voyage.",
+      "lieu": "Hurghada / Le Caire",
+      "activites": [
+        "✈️ <strong>Vol intérieur Hurghada - Le Caire</strong> : Prenez un vol court et confortable depuis l'aéroport d'Hurghada vers Le Caire. C'est le moyen le plus rapide de revenir dans la capitale.",
+        "🌃 <strong>Dîner et soirée au Caire</strong> : Profitez de votre dernière soirée au Caire pour un dîner dans un restaurant local ou une balade nocturne. Revivez les souvenirs de votre voyage."
+      ],
+      "illustration": "jour17.jpg",
+      "encarts": [
+        {
+          "symbole": "🧳",
+          "titre": "Bagages",
+          "texte": "Vérifiez les restrictions de bagages pour votre vol intérieur, elles peuvent être différentes de celles de votre vol international."
+        }
+      ]
+    },
+    {
+      "jour": 18,
+      "symbole": " pyramid",
+      "titre": "Saqqarah et Dahchour : Berceaux des Pyramides",
+      "legende": "Pour cette avant-dernière journée au Caire, explorez des sites moins fréquentés mais tout aussi fascinants. Saqqarah et Dahchour offrent un aperçu unique de l'évolution des pyramides. Une journée pour approfondir vos connaissances de l'architecture funéraire égyptienne.",
+      "lieu": "Saqqarah / Dahchour (près du Caire)",
+      "activites": [
+        " pyramid <strong>Visite de la Pyramide à Degrés de Saqqarah</strong> : Découvrez la plus ancienne structure en pierre du monde, la Pyramide à Degrés de Djoser, et son complexe funéraire. C'est un jalon majeur de l'architecture égyptienne.",
+        " pyramid <strong>Exploration des pyramides de Dahchour</strong> : Admirez la Pyramide Rhomboïdale et la Pyramide Rouge de Dahchour, témoins des premières tentatives de construction de pyramides à faces lisses. Elles offrent un contraste intéressant avec Gizeh."
+      ],
+      "illustration": "jour18.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Chaussures confortables",
+          "texte": "Les sites de Saqqarah et Dahchour impliquent de la marche sur des terrains inégaux. Prévoyez des chaussures confortables et fermées."
+        }
+      ]
+    },
+    {
+      "jour": 19,
+      "symbole": "🛍️",
+      "titre": "Derniers Instants au Caire",
+      "legende": "Profitez de cette dernière journée complète au Caire pour revisiter un lieu coup de cœur, faire vos derniers achats ou simplement vous imprégner de l'ambiance de la ville. Une journée flexible pour savourer les derniers instants de votre aventure égyptienne.",
+      "lieu": "Le Caire",
+      "activites": [
+        "🛍️ <strong>Derniers achats et souvenirs</strong> : Retournez au Khan el-Khalili ou explorez d'autres marchés pour trouver les derniers souvenirs et cadeaux. N'oubliez pas de marchander !",
+        "🚶‍♂️ <strong>Balade libre et découverte</strong> : Flânez dans les quartiers que vous avez appréciés, découvrez de nouvelles rues ou asseyez-vous dans un café pour observer la vie cairote. Laissez-vous porter par l'instant.",
+        "🍽️ <strong>Dîner d'adieu</strong> : Offrez-vous un dîner spécial dans un restaurant avec vue sur le Nil ou un établissement proposant de la cuisine égyptienne raffinée. Célébrez la fin de votre voyage."
+      ],
+      "illustration": "jour19.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Spécialités locales",
+          "texte": "Pensez aux épices, aux bijoux en argent, aux papyrus (vérifiez l'authenticité), aux cotons égyptiens ou aux objets en cuivre comme souvenirs."
+        }
+      ]
+    },
+    {
+      "jour": 20,
+      "symbole": "✈️",
+      "titre": "Départ du Caire",
+      "legende": "C'est le moment de dire au revoir à l'Égypte, riche de souvenirs inoubliables et d'expériences fascinantes. Après un dernier petit-déjeuner, vous serez transféré à l'aéroport pour votre vol retour. Emportez avec vous la magie des pharaons et la chaleur de l'accueil égyptien.",
+      "lieu": "Le Caire",
+      "activites": [
+        "🍳 <strong>Dernier petit-déjeuner égyptien</strong> : Savourez un dernier petit-déjeuner typique avant votre départ. Goûtez au foul medames ou au ta'ameya (falafel égyptien).",
+        "✈️ <strong>Transfert à l'aéroport et départ</strong> : Transfert vers l'aéroport international du Caire pour votre vol retour vers Gilles, France. Le cœur rempli de souvenirs précieux."
+      ],
+      "illustration": "jour20.jpg",
+      "encarts": [
+        {
+          "symbole": "🛬",
+          "titre": "Confirmation de vol",
+          "texte": "Vérifiez l'heure de votre vol et les détails de votre transfert la veille pour éviter tout stress le jour du départ."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "500€/pers (vol A/R Gilles, France - Le Caire avec escale en classe économique)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "350€/pers (trains de nuit, vols intérieurs, taxis, bus locaux)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "600€/pers (environ 30€/jour pour repas variés dans des restaurants locaux et intermédiaires)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "1300€/pers (20 nuits en hôtels 3 étoiles, environ 65€/nuit)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "450€/pers (entrées des sites, excursions, vol montgolfière)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois d'octobre à avril.",
+      "symbole": "☀️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "L'Égypte est le pays le plus peuplé du monde arabe, avec une population d'environ 109 millions d'habitants, majoritairement concentrée le long du Nil.",
+      "symbole": "👥"
+    },
+    {
+      "titre": "L'Égypte est un pays transcontinental, situé à la jonction de l'Afrique du Nord-Est et du Moyen-Orient. Sa civilisation est l'une des plus anciennes et des plus influentes du monde.",
+      "symbole": "🌍"
+    },
+    {
+      "titre": "Le calendrier égyptien antique était l'un des premiers à compter 365 jours, divisés en 12 mois de 30 jours, plus 5 jours \"épagomènes\".",
+      "symbole": "🗓️"
+    },
+    {
+      "titre": "Le Nil, fleuve sacré, est le plus long fleuve du monde et la source de vie de l'Égypte. Sans lui, la civilisation égyptienne n'aurait jamais pu prospérer.",
+      "symbole": "💧"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Infos officielles et inspirations",
+      "titre": "Tourisme Égypte",
+      "url": "https://egypt.travel/fr/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météo",
+      "titre": "Météo Égypte",
+      "url": "https://www.accuweather.com/fr/eg/egypt-weather",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Horaires et réservation de trains",
+      "titre": "Egyptian National Railways",
+      "url": "https://enr.gov.eg/en/",
+      "symbole": "🚆"
+    },
+    {
+      "legende": "Vols intérieurs en Égypte",
+      "titre": "EgyptAir",
+      "url": "https://www.egyptair.com/fr/Pages/default.aspx",
+      "symbole": "✈️"
+    }
+  ]
+}
